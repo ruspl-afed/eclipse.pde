@@ -382,10 +382,8 @@ public class ExportPackageVisibilitySection extends TableSection implements IPar
 	}
 
 	private String description(ExportPackageObject[] packages) {
-		return Arrays.stream(packages)//
-				.filter(Objects::nonNull)//
-				.map(ExportPackageObject::getName)
-				.collect(Collectors.joining(", ")); //$NON-NLS-1$
+		return Arrays.stream(packages).filter(Objects::nonNull).map(ExportPackageObject::getName)
+			.collect(Collectors.joining(", ")); //$NON-NLS-1$
 	}
 
 	private BundleInputContext getBundleContext() {
